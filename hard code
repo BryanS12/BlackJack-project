@@ -1,0 +1,35 @@
+import random
+name = input("whats your name")
+print("hello "+str(name))
+rank = [1,2,3,4,5,6,7,8,9,10,11,12,13,1,2,3,4,5,6,7,8,9,10,11,12,13,1,2,3,4,5,6,7,8,9,10,11,12,13,1,2,3,4,5,6,7,8,9,10,11,12,13]
+print("your cards are:")
+i = random.choice(rank)
+print(i)
+rank.remove(i)
+l = random.choice(rank)
+print(l)
+rank.remove(l)
+print("these are the dealers cards")
+fi = random.choice(rank)
+rank.remove(fi) #dealers cards
+li = random.choice(rank)
+print(li)
+rank.remove(li)
+card = input("do you want another card? reply y or n")
+if str(card) == "y":
+    k = random.choice(rank)
+    print(k)
+    rank.remove(k)
+else:
+    k = 0
+if k + i +l > fi +li:
+    g =k + i +l
+    j = fi +li
+    print(str(g)+"greater than "+str(j))
+    print("you win")
+else:
+    g =k + i +l
+    j = fi +li
+    print(str(g)+"lesthan"+str(j))
+    print("you lose!")
+    
